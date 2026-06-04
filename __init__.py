@@ -11,12 +11,14 @@ Architecture:
   L1 (prompt)      — System prompt block with active entities + summary
   L0 (immediate)   — Current conversation context (handled by Hermes)
 
-Key features:
+|Key features:
   - Diffusion activation prefetch: keyword match → graph traverse → inject
   - MESI coherence: track entity states across sessions to prevent staleness
   - Auto-extraction: entity and triple extraction from user/assistant turns
   - LLM-driven NER with regex fallback for hybrid entity extraction
   - Auto-linking: co-occurrence edges + transitive inference across entities
+  - GBrain fallback: when graph prefetch is weak (<2 entities), search GBrain
+  - Merge: graph entities + GBrain semantic pages in single context block
   - Zero external dependencies beyond stdlib + pyyaml (config read)
 
 Usage in config.yaml:
