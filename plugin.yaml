@@ -1,0 +1,5 @@
+name: glidingcache
+description: "Gliding Horse tiered memory (L0-L3) with diffusion-activation prefetch and MESI coherence. Zero external dependencies — pure stdlib."
+version: 0.4.0
+author: "Nous Research / Gliding Horse port"
+type: memory
